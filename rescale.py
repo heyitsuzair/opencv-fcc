@@ -11,16 +11,17 @@ def rescaleFrame(frame, scale=0.75):
     return cv.resize(frame, dimensions, interpolation=cv.INTER_AREA)
 
 
-# img = cv.imread('photos/cat_large.jpg')
-# resized_img = rescaleFrame(img, 0.5)
-# cv.imshow('Cat', img)
-# cv.imshow('Cat-Resized', resized_img)
-# cv.waitKey(0)
+img = cv.imread('photos/cat_large.jpg')
+resized_img = rescaleFrame(img, 0.5)
+cv.imshow('Cat', img)
+cv.imshow('Cat-Resized', resized_img)
+cv.imwrite('photos/cat_large_resized.jpg', resized_img)
+cv.waitKey(0)
 
-def changeRes(width, height):
-    # Live Video
-    capture.set(3, width)
-    capture.set(4, height)
+# def changeRes(width, height):
+#     # Live Video
+#     capture.set(3, width)
+#     capture.set(4, height)
 
 # capture = cv.VideoCapture('videos/dog.mp4')
 
