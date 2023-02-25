@@ -30,5 +30,6 @@ cv.imshow('Park', resized)
 # Crop
 cropped = img[50:200, 200:400]
 cv.imshow('Cat', cropped)
+print(type(cropped))
 
 cv.waitKey(0)
